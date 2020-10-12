@@ -25,8 +25,8 @@
         </div>
 
         <div class="row justify-content-around p-5">
-            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button">
-                <h5>Premier son</h5>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play()">
+                <h5>PARDON ?</h5>
                 <span style="color: Tomato">
                     <i class="fas fa-play-circle fa-3x"></i>
                 </span>
@@ -50,7 +50,20 @@
                 </span>
             </button>
         </div>
-        
+
+        <script>
+            var myAudio = document.createElement("audio");
+            myAudio.src = "pluie.mp3";
+            function play(){
+                if(!myAudio.paused){
+                    myAudio.pause();
+                }else{
+                    myAudio.play();
+                }
+                
+            }
+        </script>
+
     </body>
 
 </html>
