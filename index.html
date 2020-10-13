@@ -25,45 +25,56 @@
         </div>
 
         <div class="row justify-content-around p-5">
-            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play()">
-                <h5>PARDON ?</h5>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(ehLautreEh)">
+                <h5>Eh l'autre eh !</h5>
                 <span style="color: Tomato">
                     <i class="fas fa-play-circle fa-3x"></i>
                 </span>
             </button>
-            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button">
-                <h5>Deuxième son</h5>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(hugo)">
+                <h5>Putain Hugo</h5>
                 <span style="color: Tomato">
                     <i class="fas fa-play-circle fa-3x"></i>
                 </span>
             </button>
-            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button">
-                <h5>Troisième son</h5>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(ilEstOuMonTel)">
+                <h5>Il est où mon telephone ?</h5>
                 <span style="color: Tomato">
                     <i class="fas fa-play-circle fa-3x"></i>
                 </span>
             </button>
-            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button">
-                <h5>Quatrième son</h5>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(okMonFrere)">
+                <h5>Ok mon fwewe</h5>
+                <span style="color: Tomato">
+                    <i class="fas fa-play-circle fa-3x"></i>
+                </span>
+            </button>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(ohLaGueule)">
+                <h5>Oh la gueule</h5>
+                <span style="color: Tomato">
+                    <i class="fas fa-play-circle fa-3x"></i>
+                </span>
+            </button>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(ouinOuin)">
+                <h5>Ouin Ouin</h5>
+                <span style="color: Tomato">
+                    <i class="fas fa-play-circle fa-3x"></i>
+                </span>
+            </button>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(unVolant)">
+                <h5>Un volant et quatre roues</h5>
+                <span style="color: Tomato">
+                    <i class="fas fa-play-circle fa-3x"></i>
+                </span>
+            </button>
+            <button class="btn btn-dark col-lg-5 col-md-5 col-sm-5 m-2" type="button" onclick="play(weMaisLaNon)">
+                <h5>Wé mais là non</h5>
                 <span style="color: Tomato">
                     <i class="fas fa-play-circle fa-3x"></i>
                 </span>
             </button>
         </div>
 
-        <script>
-            var myAudio = document.createElement("audio");
-            myAudio.src = "pluie.mp3";
-            function play(){
-                if(!myAudio.paused){
-                    myAudio.pause();
-                }else{
-                    myAudio.play();
-                }
-                
-            }
-        </script>
-
+        <script src="app.js"></script>
     </body>
-
 </html>
