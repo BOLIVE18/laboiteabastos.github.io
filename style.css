@@ -18,6 +18,7 @@ hr{
 }
 
 footer{
-    border-top: 2px solid #bbb;
+    box-sizing: border-box;
+    border-top: 2px solid #f1f1f1;
     overflow: hidden;
 }
