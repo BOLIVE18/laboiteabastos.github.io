@@ -19,4 +19,5 @@ hr{
 
 footer{
     border-top: 2px solid #bbb;
+    overflow: hidden;
 }
