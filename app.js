@@ -22,11 +22,60 @@ unVolant.src = "sons/un-volant-et-quatre-roues.mp3";
 var weMaisLaNon = document.createElement("audio");
 weMaisLaNon.src = "sons/wé-mais-la-non.mp3";
 
-function play(son){
-    if(!son.paused){
-        son.pause();
-        son.currentTime = 0;
+var caMemoustille = document.createElement("audio");
+caMemoustille.src = "sons/ca-memoustille.mp3";
+
+var entameMaisPasMort = document.createElement("audio");
+entameMaisPasMort.src = "sons/entame-mais-pas-mort.mp3";
+
+var grandSoif = document.createElement("audio");
+grandSoif.src = "sons/grand-soif.mp3";
+
+var grosCon = document.createElement("audio");
+grosCon.src = "sons/gros-con.mp3";
+
+var jsuisBienLa = document.createElement("audio");
+jsuisBienLa.src = "sons/je-suis-bien-la.mp3";
+
+var larmeALoeil = document.createElement("audio");
+larmeALoeil.src = "sons/larme-a-loeil.mp3";
+
+var leDemarreur = document.createElement("audio");
+leDemarreur.src = "sons/le-demarreur.mp3";
+
+var pardon = document.createElement("audio");
+pardon.src = "sons/pardon.mp3";
+
+var topTop = document.createElement("audio");
+topTop.src = "sons/top-top.mp3";
+
+var tuPuDuCul = document.createElement("audio");
+tuPuDuCul.src = "sons/tu-pu-du-cul.mp3";
+
+function play(son, i){
+    let sonToPlay = son
+    let duration = sonToPlay.duration;
+    if(!sonToPlay.paused){
+        sonToPlay.pause();
+        sonToPlay.currentTime = 0;
+        playClass(document.getElementById("playbutton"+i));
     }else{
-        son.play();
+        sonToPlay.play();
+        pauseClass(document.getElementById("playbutton"+i));
+        setTimeout(function(){
+            if(sonToPlay.currentTime > duration*0.80){
+                playClass(document.getElementById("playbutton"+i));
+            }
+        }, duration*1000);
     }
+}
+
+function pauseClass(element){
+    element.classList.remove("fa-play-circle");
+    element.classList.add("fa-pause-circle");
+}
+
+function playClass(element){
+    element.classList.remove("fa-pause-circle");
+    element.classList.add("fa-play-circle");
 }
